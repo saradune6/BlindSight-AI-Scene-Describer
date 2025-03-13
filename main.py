@@ -5,13 +5,12 @@ import google.generativeai as genai
 from PIL import Image
 from google.generativeai.types import content_types
 import streamlit as st
-# from dotenv import load_dotenv
-# import os
+from dotenv import load_dotenv
+import os
 
-# load_dotenv()
-# API_KEY = os.getenv("GOOGLE_API_KEY")
+load_dotenv()
+API_KEY = os.getenv("GOOGLE_API_KEY")
 
-API_KEY='AIzaSyDMth0Boy5y-bMnPlZ5SiUWxneKRdsSBdg'
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-pro-001")
 
